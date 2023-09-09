@@ -4,6 +4,7 @@
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
 vim.opt.relativenumber = true;
+vim.opt.autoindent = true;
 lvim.transparent_window = true;
 require'lspconfig'.pyright.setup{}
 
@@ -11,16 +12,14 @@ require'lspconfig'.pyright.setup{}
 lvim.keys.insert_mode['jk'] = "<ESC>" -- exit to normal mode
 
 -- split window
-lvim.keys.normal_mode['sv'] = "<C-w>v" -- split vertically
-lvim.keys.normal_mode['sh'] = "<C-w>s" -- split horizontally
+lvim.keys.normal_mode['vs'] = "<C-w>v" -- split vertically
+lvim.keys.normal_mode['hs'] = "<C-w>s" -- split horizontally
 lvim.keys.normal_mode['se'] = "<C-w>=" -- make all splits equal size
 lvim.keys.normal_mode['sx'] = ":close<CR>" -- close current split
 
 -- Tabs
 lvim.keys.normal_mode['to'] = ":tabnew<CR>" -- open new tab
-lvim.keys.normal_mode['tx'] = ":tabclose<CR>" -- close current tab
-lvim.keys.normal_mode['tn'] = ":tabn<CR>" -- go to next tab
-lvim.keys.normal_mode['tb'] = ":tabp<CR>" -- go to previous tab
+
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = "astro,css,eruby,html,htmldjango,javascriptreact,less,pug,sass,scss,svelte,typescriptreact,vue",
