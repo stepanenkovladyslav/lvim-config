@@ -22,7 +22,7 @@ lvim.keys.normal_mode['to'] = ":tabnew<CR>" -- open new tab
 
 
 lvim.plugins = {
-  {'use "bluz71/vim-nightfly-colors'},
+  {"bluz71/vim-nightfly-colors"},
 }
 
 vim.cmd('colorscheme nightfly')
