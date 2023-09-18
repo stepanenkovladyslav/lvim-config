@@ -21,6 +21,12 @@ lvim.keys.normal_mode['sx'] = ":close<CR>" -- close current split
 lvim.keys.normal_mode['to'] = ":tabnew<CR>" -- open new tab
 
 
+lvim.plugins = {
+  {'use "bluz71/vim-nightfly-colors'},
+}
+
+vim.cmd('colorscheme nightfly')
+
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = "astro,css,eruby,html,htmldjango,javascriptreact,less,pug,sass,scss,svelte,typescriptreact,vue",
   callback = function()
