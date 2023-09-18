@@ -12,8 +12,8 @@ require'lspconfig'.pyright.setup{}
 lvim.keys.insert_mode['jk'] = "<ESC>" -- exit to normal mode
 
 -- split window
-lvim.keys.normal_mode['vs'] = "<C-w>v" -- split vertically
-lvim.keys.normal_mode['hs'] = "<C-w>s" -- split horizontally
+lvim.keys.normal_mode['sv'] = "<C-w>v" -- split vertically
+lvim.keys.normal_mode['sh'] = "<C-w>s" -- split horizontally
 lvim.keys.normal_mode['se'] = "<C-w>=" -- make all splits equal size
 lvim.keys.normal_mode['sx'] = ":close<CR>" -- close current split
 
