@@ -10,6 +10,7 @@ require'lspconfig'.pyright.setup{}
 
 -- Custom keymaps
 lvim.keys.insert_mode['jk'] = "<ESC>" -- exit to normal mode
+lvim.keys.normal_mode['sq'] = "ciw''<ESC>hp" -- surround word with ''
 
 -- split window
 lvim.keys.normal_mode['sv'] = "<C-w>v" -- split vertically
