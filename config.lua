@@ -8,19 +8,32 @@ vim.opt.autoindent = true;
 lvim.transparent_window = true;
 require'lspconfig'.pyright.setup{}
 
+
 -- Custom keymaps
 lvim.keys.insert_mode['jk'] = "<ESC>" -- exit to normal mode
-lvim.keys.normal_mode['sq'] = "ciw''<ESC>hp" -- surround word with ''
+lvim.keys.normal_mode['sq'] = "ciw\"\"<ESC>hp" -- surround word with ''
+lvim.keys.normal_mode['sh'] = "<C-w>s" -- split horizontally
+lvim.keys.normal_mode['sv'] = "<C-w>v" -- split vertically
+lvim.keys.normal_mode['dwp'] = "\"_dw"
+lvim.keys.normal_mode['dlp'] = "\"_dd"
+
 
 -- split window
-lvim.keys.normal_mode['sv'] = "<C-w>v" -- split vertically
-lvim.keys.normal_mode['sh'] = "<C-w>s" -- split horizontally
 lvim.keys.normal_mode['se'] = "<C-w>=" -- make all splits equal size
 lvim.keys.normal_mode['sx'] = ":close<CR>" -- close current split
 
 -- Tabs
 lvim.keys.normal_mode['to'] = ":tabnew<CR>" -- open new tab
 
+-- For the tmux (<ESC>+j/k changes line)
+lvim.keys.insert_mode["<A-j>"] = false
+lvim.keys.insert_mode["<A-k>"] = false
+lvim.keys.normal_mode["<A-j>"] = false
+lvim.keys.normal_mode["<A-k>"] = false
+lvim.keys.visual_block_mode["<A-j>"] = false
+lvim.keys.visual_block_mode["<A-k>"] = false
+lvim.keys.visual_block_mode["J"] = false
+lvim.keys.visual_block_mode["K"] = false
 
 lvim.plugins = {
   {"bluz71/vim-nightfly-colors"},
@@ -53,4 +66,5 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     })
   end,
 })
+
 
