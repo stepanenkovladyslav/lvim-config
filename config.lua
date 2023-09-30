@@ -14,9 +14,10 @@ lvim.keys.insert_mode['jk'] = "<ESC>" -- exit to normal mode
 lvim.keys.normal_mode['sq'] = "ciw\"\"<ESC>hp" -- surround word with ''
 lvim.keys.normal_mode['sh'] = "<C-w>s" -- split horizontally
 lvim.keys.normal_mode['sv'] = "<C-w>v" -- split vertically
-lvim.keys.normal_mode['dwp'] = "\"_dw"
-lvim.keys.normal_mode['dlp'] = "\"_dd"
-
+lvim.keys.normal_mode['dwp'] = "\"_dw" -- delete word without yanking
+lvim.keys.normal_mode['dlp'] = "\"_dd" -- delete line without yanking
+lvim.keys.normal_mode['H'] = "^" -- go to the beginning of the line
+lvim.keys.normal_mode['L'] = "$" -- go to the end of the line
 
 -- split window
 lvim.keys.normal_mode['se'] = "<C-w>=" -- make all splits equal size
